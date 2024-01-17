@@ -1,0 +1,61 @@
+TYPESCRIPT
+
+a) Cos'è ?
+
+È una versione di JavaScript che aggiunge un sistema di tipizzazione forte, a differenza di JS. Potremmo voler creare oggetti con tipizzazioni miste grazie a | (number | string ).
+
+b) A cosa serve ?
+
+Serve per migliorare la manutenibilità e la robustezza del codice. Molto utile per porre dei limiti, delle regole, di conseguenza molto utile per la creazione delle API.
+
+c) Che problemi risolve ?
+
+Avendo una tipizzazione forte aumenta la sicurezza, evita bug, soprattutto immagino quando si lavorera in team di molte persone. Ovviamente ponendo che un dato debba essere per forza di cose di un tipo o di un 'altro, evita la possibile immissione di dati appunto non oppurtuni
+
+d)differenze con JS semplice ?
+
+La tipizzazione forte. Se un dato richiesto è ti tipo ( type ) number, deve essere per forza number ,a differenza di js che riceve dati di qualsiasi tipo ( che grazie al metodo typeof possiamo scoprire di che tipo sono ).
+
+e) Il compilatore typescript perché è necessario? 
+
+Semplicemente è necessario perchè trasfroma il codice che noi scriviamo in typescript in javascript. Quando noi creiamo un file esempio.ts, grazie al comando powershell tsc esempio.ts, andremo a creare in automatico un file .js che si autocompleterà da solo, trasformando quello che appunto noi scrviamo in TS in JS
+
+f) come si usa ?
+
+inserendo il comando tsc <nomefile>.ts in powershell. Lo crea e lo gestisce in automatico
+
+g)La Type Inference
+
+E' una " funzionalità " del compilatore, che anche se non viene specificato il type di un valore, appunto il compilatore dal contesto riuscirà a capire di che type è
+
+h)Il tipo ‘any’ ?
+
+Il type any, è un escamotage per rendere piu " fluida " la tipizzazione. Non viene specificato nessun type del valore che dovrà ricevere. Quindi verrà utilizzata per ricevere anche valori di tipo array, null,undefinied etcetc
+
+i) Il tipo Union ?
+
+Il tipo Union è un mix di type, si definisce con il | , e si dichiara con 'number | string ' .
+
+l) Il tipo Tuple ?
+
+Il tipo tuple serve per dichiarare un array con un numero fisso di elementi, che però potranno essere di dipo diverso l'uno dall'altro, a differenza degli array standard. Nelle tuple dobbiamo/possiamo dichiarare il tipo di ogni elemento in posizione specifiche:  let tupla: [string, number] = ["Elemento stringa", 42]
+
+m)Le Interfaces in TS ?
+
+Sono dei " modelli " che consentono di definire la struttura di un oggetto, senza definire l'oggetto stesso. Sono dei veri e propri esempio strutturali, che poi vengono richiamati per creare l'oggetto stesso, seguendo quelle REGOLE in modo da aver un controllo piu serrato e coem dicevamo di creare meno bug :
+
+interface Studente { nome: string; eta: number; } così definiamo solo la " forma " dell'oggetto; si dichiarano con l uppercase ( prima lettera sempre maiuscola )
+
+let studenteVecchio: Studente = { nome: Marco ; eta: 33 }
+
+n) Types vs Interfaces 
+
+Sono simili, come funzionamento:
+
+i Types sono un pò più flessibili e possono rappresentare tipi primitivi e union ad esempio, le Interfaces vengono usate per lo piu per definire contratti, per oggetti, funzioni e classi
+
+o) I Generics 
+
+I generics in TypeScript consentono di scrivere codice flessibile che può lavorare con diversi tipi di dati. Essi permettono di definire funzioni, classi o interfacce senza specificare il tipo di dati in anticipo, ma di lasciarlo decidere quando si utilizza quella componente.
+
+In sostanza, i generics offrono una flessibilità nei tipi di dati utilizzati, rendendo il codice più riutilizzabile e adattabile a diverse situazioni.
